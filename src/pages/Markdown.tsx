@@ -39,7 +39,7 @@ const Markdown: React.FC = () => {
             <ButtonGroup onClear={handleClear} onShowHtml={handleShowHtml} isFlipped={isFlipped} />
             <div className="preview-container">
                 <ReactCardFlip isFlipped={isFlipped} containerStyle={{ width: "100%" }} flipDirection='horizontal'>
-                    <PreviewContainer title="Markdown Preview" content={<div style={{ wordBreak: 'break-all', whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: html }} />} />
+                    <PreviewContainer title="Markdown Preview" content={<div style={{ wordBreak: 'break-all', }} dangerouslySetInnerHTML={{ __html: html }} />} />
                     <PreviewContainer title="HTML Preview" content={html && <SyntaxHighlighter language="html" style={darcula} lineProps={{ style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' } }}
                         wrapLines={true} >{html}</SyntaxHighlighter>} />
                 </ReactCardFlip>
